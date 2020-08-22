@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 
 const MovieList = props => {
@@ -32,6 +33,7 @@ function MovieDetails({ movie }) {
   return (
     <div className="movie-card">
       <h2>{title}</h2>
+      <Link exact to={`/movies/${movie.id}`}><h2>{title}</h2></Link>
       <div className="movie-director">
         Director: <em>{director}</em>
       </div>
